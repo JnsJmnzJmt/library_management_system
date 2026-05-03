@@ -1,4 +1,4 @@
-/* css for register.php page */
+/* css for register.php , login.php page */
 
 *{
     margin: 0;
@@ -27,3 +27,6 @@
     border-radius: 6px;
     background-color: skyblue;
 }
+
+/* admin add_book.php */
+
