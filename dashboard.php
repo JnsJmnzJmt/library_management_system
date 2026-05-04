@@ -7,15 +7,6 @@
 echo "Welcome to dashboard";
 
 
-// if(!isset($_SESSION['user_id'])){
-//     // $user_id = $_SESSION['user_id'];
-//     header("Location: login.php");
-//     exit();
-// } else{
-//     // header("Location: login.php");
-//     echo "You are logged in as: {$_SESSION['role']}";
-// }
-
 session_start();  // $_SESSION['user_id'] = $row['id']; 
                   // $_SESSION['role'] = $row['role'];
 
@@ -42,6 +33,7 @@ if(isset($_SESSION['user_id'])){
 </head>
 
 <body>
+    <a href="request_check.php">request updates</a>
     <a href="logout.php">Logout</a> 
     <!-- ?user_id=echo $user_id;  -->
 </body>

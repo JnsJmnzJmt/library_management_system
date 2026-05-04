@@ -20,10 +20,12 @@ if(isset($_SESSION['user_id'])){
         }
     } else{
     header("Location: ../dashboard.php");
+    exit();
     } 
 
 } else{
     header("Location: ../login.php"); 
+    exit();
 }
 
 

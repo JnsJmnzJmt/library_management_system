@@ -1,18 +1,19 @@
 <?php
 
-session_start();
-// $_SESSION['user_id'] = $row['id']; 
-// $_SESSION['role'] = $row['role'];
+session_start();  // $_SESSION['user_id'] = $row['id']; 
+                  // $_SESSION['role'] = $row['role'];
 
-include "../database.php";
+include "database.php";
+
+echo "Welcome to dashboard";
+
 
 if(isset($_SESSION['user_id'])){
-
-    if($_SESSION['role'] == "admin"){
+    if($_SESSION['role'] == "user") {
         
-        include "../database.php";
+        $user_id = $_SESSION['user_id'];
 
-        $sql = "SELECT * FROM transactions";
+        $sql = "SELECT * FROM transactions WHERE user_id='$user_id'";
         $result = mysqli_query($connection, $sql);
 
         if(!$result){
@@ -21,14 +22,14 @@ if(isset($_SESSION['user_id'])){
             
         }
     } else{
-    header("Location: ../dashboard.php");
-    exit();
-    } 
-
+        header("Location: admin/dashboard.php");
+        exit();
+    }
 } else{
-    header("Location: ../login.php"); 
+    header("Location: login.php");
     exit();
 }
+
 
 ?>
 
@@ -86,8 +87,6 @@ if(isset($_SESSION['user_id'])){
                 <th>issue date</th>
                 <th>return date</th>
                 <th>status</th>
-                <th>action</th>
-                <th>action</th>
             </tr>
         </thead>
 
@@ -102,8 +101,6 @@ if(isset($_SESSION['user_id'])){
                 <td> <?php echo "{$row['issue_date']}" ?> </td>
                 <td> <?php echo "{$row['return_date']}" ?> </td>
                 <td> <?php echo "{$row['status']}" ?> </td>
-                <td> <a class="update" href="update_transactions.php?transaction_id=<?php echo $row['id']?>"> update </a> </td>
-                <td> <a class="delete" href="delete_transactions.php?transaction_id=<?php echo $row['id']?>"> delete </a> </td>
             </tr>
 
             <?php } ?>
