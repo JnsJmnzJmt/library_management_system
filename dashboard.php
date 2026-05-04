@@ -33,7 +33,7 @@ if(isset($_SESSION['user_id'])){
 </head>
 
 <body>
-    <a href="request_check.php">request updates</a>
+    <a href="request_check.php">request updates</a> <br>
     <a href="logout.php">Logout</a> 
     <!-- ?user_id=echo $user_id;  -->
 </body>
