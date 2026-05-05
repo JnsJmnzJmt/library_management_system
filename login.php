@@ -46,14 +46,28 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 <body>
 
-    <div class="register">
+<div class="register">
+
+    <!-- <img src="assets/LMS_logo.png" alt="LMS_logo" class="logo"> -->
+
+    <div class="form-box">
         <form action="login.php" method="POST">
-            <input type="email" name="email" placeholder="Enter email"> <br>
-            <input type="password" name="password" placeholder="Enter password"> <br>
+            <input type="email" name="email" placeholder="Enter email" required>
+            <input type="password" name="password" placeholder="Enter password" required>
             <button type="submit">Login</button> 
         </form>
+
+        <p>Don't have an account?</p>
+
+        <a href="register.php">
+            <button type="button" class="signup-btn">Signup</button>
+        </a>
     </div>
-    
+
+</div>
+
+
+
 </body>
 
 </html>

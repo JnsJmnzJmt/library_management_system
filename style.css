@@ -1,32 +1,66 @@
-/* css for register.php , login.php page */
-
 *{
     margin: 0;
     padding: 0;    
+    box-sizing: border-box;
 }
 
 .register{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
-    background-color: green;
+    height: 100vh; /* center vertically */
+    background-color: #eafbea;
 }
 
-.register input{
-    padding: 20px;
-    margin: 6px;
+/* CARD */
+.form-box{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column; /* 🔥 IMPORTANT */
+    align-items: center;
+}
+
+/* INPUTS */
+.form-box input{
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
     border: none;
     border-bottom: 2px solid blue;
 }
 
-.register button{
-    margin: 6px;
-    padding: 20px;
+/* BUTTONS */
+.form-box button{
     width: 100%;
+    padding: 12px;
+    margin-top: 10px;
     border-radius: 6px;
     background-color: skyblue;
+    border: none;
+    cursor: pointer;
 }
 
-/* admin add_book.php */
+/* SIGNUP BUTTON (bottom) */
+.signup-btn{
+    background-color: green;
+    color: white;
+}
 
+/* TEXT */
+.form-box p{
+    margin-top: 15px;
+}
+
+/* LOGO DESIGN */
+.register .logo img{
+    width: 100px;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 50%; /* 🔥 bilog */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* shadow */
+    padding: 5px;
+    background: white;
+}

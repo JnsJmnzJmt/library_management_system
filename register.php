@@ -32,6 +32,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 <body>
 
     <div class="register">
+
+    <div class="form-box">
         <form action="register.php" method="POST">
             <input type="text" name="name" placeholder="Enter name"> <br>
             <input type="email" name="email" placeholder="Enter email"> <br>
@@ -39,6 +41,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <input type="text" name="role" value="user" hidden> <br>
             <button type="submit">Sign up</button> 
         </form>
+
+        <p>Already have an account?</p>
+
+        <a href="login.php">
+            <button type="button" class="login-btn">Login</button>
+        </a>
+    </div>
+
+
     </div>
     
 </body>

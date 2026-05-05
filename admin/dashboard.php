@@ -41,6 +41,7 @@ if(isset($_SESSION['user_id'])){
 
         .admin-navbar ul li{
             list-style: none;
+            margin: 20px;
         }
 
     </style> 
@@ -51,6 +52,7 @@ if(isset($_SESSION['user_id'])){
     <nav class="admin-navbar">
         <ul>
             <li> <a href="view_transactions.php"> view transactions </a> </li>
+            <li> <a href="manage_users.php"> manage users </a> </li>
         </ul>
     </nav>
 
