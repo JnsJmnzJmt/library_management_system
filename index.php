@@ -70,6 +70,9 @@ if(!$result){
 <body>
     <header> 
         <h1>Library Home Page</h1> 
+        <div classs="buttons">
+            <a href="dashboard.php">Back</a>
+        </div>
     </header>
 
     <section class="index-section">

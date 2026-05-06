@@ -65,7 +65,7 @@ if(isset($_SESSION['user_id'])){
 
 <body>
 
-    <table>
+    <table> 
         <thead>
             <tr>
                 <th>Title</th>
@@ -73,6 +73,7 @@ if(isset($_SESSION['user_id'])){
                 <th>ISBN</th>
                 <th>Image</th>
                 <th>Quantity</th>
+                <th> <a href="dashboard.php">Back</a></th>
             </tr>
         </thead>
 

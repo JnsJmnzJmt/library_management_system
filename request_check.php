@@ -79,6 +79,8 @@ if(isset($_SESSION['user_id'])){
 
 <body>
 
+    <a href="dashboard.php">Back</a>
+
     <table>
         <thead>
             <tr>
@@ -106,7 +108,6 @@ if(isset($_SESSION['user_id'])){
             <?php } ?>
         </tbody>
     </table>
-
 
 </body>
 
